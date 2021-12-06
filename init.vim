@@ -55,9 +55,14 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 nnoremap <LEADER>f :FZF<CR>
 nnoremap <LEADER>zf :FZF
 
+"config markdown
+nnoremap <LEADER>m :MarkdownPreview<CR>
+
+
 "config nvim custom key
 noremap <LEADER><CR> :nohlsearch<CR>
 noremap <LEADER>- /\^-\^<CR>
+
 
 map S :w<CR>
 map s <nop>
@@ -90,5 +95,7 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
+
+Plug 'johngrib/vim-game-code-break'
 
 call plug#end()
